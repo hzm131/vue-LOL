@@ -1,0 +1,33 @@
+/*存放一些共用的css样式或者叫css初始化代码*/
+html,body,ul,li,p,h1,form,img,input{
+    margin:0;
+    padding:0;
+
+}
+ul,ol{list-style:none}
+
+a{text-decoration:none}
+
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.clearfix:after{
+    content:"";
+    height:0;
+    line-height:0;
+    display:block;
+    visibility:hidden;
+    clear:both;
+}
+.clearfix{
+    zoom:1;
+}
+.in_b{
+    display: inline-block;
+}
+body{
+   background-color: #f7f7f7;
+}
