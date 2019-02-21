@@ -11,41 +11,41 @@
 </template>
 
 <script>
-    let set;
+  import axios from 'axios'
+    let set
     export default {
         data(){
             return{
                 i: 0,
-                list: [
-                    {img: "../../../static/images/lunbo1.jpg"},
-                    {img: "../../../static/images/lunbo2.jpg"},
-                    {img: "../../../static/images/lunbo3.jpg"},
-                ],
+                list: [],
             }
         },
         mounted(){
             this.dian()
         },
+        created(){
+          this.getImage();
+        },
         methods: {
             dian1() {
-                let url1 = this.list[0].img;
-                let lunbo = document.querySelector(".lunbo");
-                lunbo.style.backgroundImage = "url(" + url1 + ")"
+              let url1 = this.list[0].image_src;
+              let lunbo = document.querySelector(".lunbo");
+              lunbo.style.backgroundImage = "url(" + url1 + ")"
             },
             dian2() {
-                let url1 = this.list[1].img;
+                let url1 = this.list[1].image_src;
                 let lunbo = document.querySelector(".lunbo");
                 lunbo.style.backgroundImage = "url(" + url1 + ")"
             },
             dian3() {
-                let url1 = this.list[2].img;
+                let url1 = this.list[2].image_src;
                 let lunbo = document.querySelector(".lunbo");
                 lunbo.style.backgroundImage = "url(" + url1 + ")"
             },
             dian() {
                 let that = this;
                 set = setInterval(() => {
-                    let url1 = this.list[that.i].img;
+                    let url1 = this.list[that.i].image_src;
                     let lunbo = document.querySelector(".lunbo");
                     lunbo.style.backgroundImage = "url(" + url1 + ")";
                     that.i++;
@@ -59,13 +59,19 @@
             kaishi() {
                 let that = this;
                 set = setInterval(() => {
-                    let url1 = this.list[that.i].img;
+                    let url1 = this.list[that.i].image_src;
                     let lunbo = document.querySelector(".lunbo");
                     lunbo.style.backgroundImage = "url(" + url1 + ")";
                     that.i++;
                     if (that.i > 2)
                         that.i = 0
                 }, 2000)
+            },
+            getImage(){
+              var that = this;
+              axios.get("/api/v3/lunbotu").then(function (res) {
+                that.list = res.data.data
+              })
             }
         }
     }
@@ -77,7 +83,7 @@
     }
     .lunbo{
         position:relative;
-        background:url("../../../static/images/lunbo1.jpg") no-repeat;
+        background:url("http://127.0.0.1:8000/public/lunbo1.jpg") no-repeat;
 
     }
     .lunbo  ul{

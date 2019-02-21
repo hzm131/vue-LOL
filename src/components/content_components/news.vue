@@ -44,7 +44,7 @@
                 <div class="right_bottom">
                     <ul>
                         <li v-for="items in img">
-                            <img :src="items.images" alt="">
+                            <img :src="items.image_src" alt="">
                         </li>
 
                     </ul>
@@ -55,6 +55,7 @@
 </template>
 
 <script>
+  import axios from 'axios'
     export default {
         data(){
            return{
@@ -163,63 +164,47 @@
         },
         methods: {
             li1(){
-                this.news = {};
-                this.newss = [];
-                for (let v in this.news1){
-                    this.news[v] = this.news1[v]
-                }
-                for(let i = 0; i<this.newss1.length; i++){
-                    this.newss.push(this.newss1[i])
-                }
+                axios.get("/api/v3/news/1").then((res)=>{
+                  this.news = res.data.data;
+                  this.newss = res.data.data.news
+                })
             },
             li2(){
-                this.news = {};
-                this.newss = [];
-                for (let v in this.news2){
-                    this.news[v] = this.news2[v]
-                }
-                for(let i = 0; i<this.newss2.length; i++){
-                    this.newss.push(this.newss2[i])
-                }
+              axios.get("/api/v3/news/2").then((res)=>{
+                this.news = res.data.data;
+                this.newss = res.data.data.news
+              })
             },
             li3(){
-                this.news = {};
-                this.newss = [];
-                for (let v in this.news3){
-                    this.news[v] = this.news3[v]
-                }
-                for(let i = 0; i<this.newss3.length; i++){
-                    this.newss.push(this.newss3[i])
-                }
+              axios.get("/api/v3/news/3").then((res)=>{
+                this.news = res.data.data;
+                this.newss = res.data.data.news
+              })
             },
             li4(){
-                this.news = {};
-                this.newss = [];
-                for (let v in this.news4){
-                    this.news[v] = this.news4[v]
-                }
-                for(let i = 0; i<this.newss4.length; i++){
-                    this.newss.push(this.newss4[i])
-                }
+              axios.get("/api/v3/news/4").then((res)=>{
+                this.news = res.data.data;
+                this.newss = res.data.data.news
+              })
             },
 
             i1(){
-                this.img = [];
-                for(let i = 0;i<this.img1.length; i++){
-                    this.img.push(this.img1[i])
-                }
+                var that = this;
+                axios.get("/api/v3/latest_skins").then(function (res) {
+                  that.img = res.data.data
+                })
             },
             i2(){
-                this.img = [];
-                for(let i = 0; i<this.img2.length; i++){
-                    this.img.push(this.img2[i])
-                }
+              var that = this;
+              axios.get("/api/v3/latest_heros").then(function (res) {
+                that.img = res.data.data
+              })
             },
             i3(){
-                this.img = [];
-                for(let i = 0; i<this.img3.length; i++){
-                    this.img.push(this.img3[i])
-                }
+              var that = this;
+              axios.get("/api/v3/weekly_heros").then(function (res) {
+                that.img = res.data.data
+              })
             },
 
         }

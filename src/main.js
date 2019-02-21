@@ -5,13 +5,13 @@ import App from './App'
 import router from './router'
 import store from './vuex/store'
 
-Vue.config.productionTip = false
-
 
 import "../static/css/common.css"
 import "../static/css/index.css"
 import "../static/css/index2.css"
 /* eslint-disable no-new */
+
+
 new Vue({
   el: '#app',
   router,

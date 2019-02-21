@@ -43,6 +43,7 @@
 </template>
 
 <script>
+  import axios from 'axios'
     export default {
         data(){
             return{
@@ -68,30 +69,30 @@
         },
         methods:{
             oli(){
-                this.list = [];
-                for (let v in this.list1){
+                /*for (let v in this.list1){
                     this.list[v] = this.list1[v]
-                }
+                }*/
+                axios.get("/api/v3/videos").then((res)=>{
+                  this.list = res.data.data
+                })
             },
             oli2(){
                 let bottom1 = document.getElementsByClassName("v_bottom")[0];
                 bottom1.style.display = "block";
                 let bottom2 = document.getElementsByClassName("v_bottom2")[0];
                 bottom2.style.display = "none";
-                this.list = [];
-                for (let v in this.list1){
-                    this.list[v] = this.list1[v]
-                }
+                axios.get("/api/v3/videos").then((res)=>{
+                  this.list = res.data.data
+                })
             },
             oli3(){
                 let bottom1 = document.getElementsByClassName("v_bottom")[0];
                 bottom1.style.display = "none";
                 let bottom2 = document.getElementsByClassName("v_bottom2")[0];
                 bottom2.style.display = "block";
-                this.list = [];
-                for (let v in this.list2){
-                    this.list[v] = this.list2[v]
-                }
+                axios.get("/api/v3/activity").then((res)=>{
+                  this.list = res.data.data
+                })
             }
         }
     }
