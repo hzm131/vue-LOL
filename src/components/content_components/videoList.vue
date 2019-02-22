@@ -48,20 +48,6 @@
         data(){
             return{
                 list:[],
-                list1:[
-                    {id:1,img:"../../../static/images/v1.jpg",p:"顶级主播秀118：Uzi再秀本命薇恩 自豪式失误五杀",sp:"04:16"},
-                    {id:2,img:"../../../static/images/v2.jpg",p:"质量王者局846：DEFT Mata Rush Untara",sp:"04:16"},
-                    {id:3,img:"../../../static/images/v3.jpg",p:"大神怎么玩：Faker新阿卡丽 各种极限操作",sp:"04:12"},
-                    {id:4,img:"../../../static/images/v4.jpg",p:"两版阿卡丽终极对决 哪个才是你心目中的刺客",sp:"06:58"},
-                    {id:5,img:"../../../static/images/v5.jpg",p:"最强锐雯逆天操作 丝血秀翻武器",sp:"02:55"},
-                    {id:6,img:"../../../static/images/v6.jpg",p:"民间大神秀：国服路人23劫！移形换影完美击杀",sp:"04:45"},
-                ],
-                list2:[
-                    {id:1,img:"../../../static/images/推荐1.jpg",gz:"1379064",h4:"泳池派对幸运宝藏",time:"2018-08-07~2018-08-20",p:"开启宝藏赢珍惜皮肤"},
-                    {id:2,img:"../../../static/images/推荐2.jpg",gz:"1973064",h4:"洛与霞七夕饰品",time:"2018-08-08~2018-09-30",p:"英雄联盟周边携手周大福工厂打造洛与霞七夕主题贵.."},
-                    {id:3,img:"../../../static/images/推荐3.jpg",gz:"1452682",h4:"7周年创作大赛",time:"2018-08-05~2018-09-25",p:"7周年玩家创作大赛，pick出最优秀的辣个他！"},
-                    {id:4,img:"../../../static/images/推荐4.jpg",gz:"246913",h4:"海克斯惊奇能量球",time:"2018-07-30~2018-08-12",p:"开启能量球抽皮肤 有机会掉落福袋赢限定皮肤"},
-                ]
              }
         },
         created(){
@@ -69,9 +55,7 @@
         },
         methods:{
             oli(){
-                /*for (let v in this.list1){
-                    this.list[v] = this.list1[v]
-                }*/
+
                 axios.get("/api/v3/videos").then((res)=>{
                   this.list = res.data.data
                 })
