@@ -17,9 +17,9 @@
                     </ul>
                 </div>
                 <div class="header-right fr hidden-sm hidden-xs">
-                    <router-link to="/register" class="d">登录</router-link>
+                    <router-link to="/register" class="d">注册</router-link>
                     <span class="ss">|</span>
-                    <router-link to="/login" class="d">注册</router-link>
+                    <router-link to="/login" class="d">登录</router-link>
                 </div>
                 <span class="i_tb hidden-md hidden-lg"><img src="../../../static/images/more.png" @click="anniu"></span>
             </div>

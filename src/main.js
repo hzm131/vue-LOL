@@ -12,9 +12,11 @@ import "../static/css/index2.css"
 /* eslint-disable no-new */
 
 
+
+
 new Vue({
   el: '#app',
   router,
   render: h => h(App),
   store
-})
+});

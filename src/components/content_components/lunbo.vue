@@ -1,6 +1,6 @@
 <template>
     <div class="content-lunbo">
-        <div class="container lunbo" @mouseover="ting" @mouseout="kaishi">
+        <div class="container lunbo" @mouseover="ting" @mouseout="dian">
             <ul class="lunbo_ul">
                 <li @click="dian1" class="lil"></li>
                 <li @click="dian2" class="lil"></li>
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-  import axios from 'axios'
+  import axios from '../../axios'
     let set
     export default {
         data(){
@@ -20,11 +20,8 @@
                 list: [],
             }
         },
-        mounted(){
-            this.dian()
-        },
         created(){
-          this.getImage();
+            this.getImage();
         },
         methods: {
             dian1() {
@@ -56,17 +53,6 @@
             ting() {
                 clearInterval(set)
             },
-            kaishi() {
-                let that = this;
-                set = setInterval(() => {
-                    let url1 = this.list[that.i].image_src;
-                    let lunbo = document.querySelector(".lunbo");
-                    lunbo.style.backgroundImage = "url(" + url1 + ")";
-                    that.i++;
-                    if (that.i > 2)
-                        that.i = 0
-                }, 2000)
-            },
             getImage(){
               var that = this;
               axios.get("/api/v3/lunbotu").then(function (res) {
@@ -83,7 +69,6 @@
     }
     .lunbo{
         position:relative;
-        background:url("http://127.0.0.1:8000/public/lunbo1.jpg") no-repeat;
 
     }
     .lunbo  ul{

@@ -55,7 +55,7 @@
 </template>
 
 <script>
-  import axios from 'axios'
+  import axios from '../../axios'
     export default {
         data(){
            return{
@@ -73,6 +73,7 @@
         methods: {
             li1(){
                 axios.get("/api/v3/news/1").then((res)=>{
+                  console.log(res)
                   this.news = res.data.data;
                   this.newss = res.data.data.news
                 })
