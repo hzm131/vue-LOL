@@ -21,6 +21,7 @@ axios.register = (name,password)=>{
   }).then((res)=>{
     store.set('token', res.data.data);
     axios.defaults.headers.common['Authorization'] = `Bearer ${res.data.data}`;
+    alert(res.data.data)
   })
 };
 
