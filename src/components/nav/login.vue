@@ -4,8 +4,8 @@
       <h3>登录页面....</h3>
       <div class="xx">
         用户名：<input type="text" v-model='name' class="xxx"> <br/>
-        密码：<input type="password" v-model='password' class="xxx"> <br/>
-        <button v-on:click="sub">登录</button>
+        <span class="sss">密码：</span><input type="password" v-model='password' class="xxx"> <br/>
+        <button v-on:click="sub" class="ddd">登录</button>
       </div>
       <footer_component></footer_component>
     </div>
@@ -35,10 +35,23 @@
 </script>
 
 <style scoped>
+  h3{
+    text-align: center;
+  }
   .xx{
-    margin-bottom: 30px;
+    width: 500px;
+    margin: 10px auto;
   }
   .xxx{
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    width: 300px;
+    height: 30px;
+  }
+  .sss{
+    margin-right: 15px;
+  }
+  .ddd{
+    width: 60px;
+    font-size: 16px;
   }
 </style>

@@ -11,7 +11,8 @@ import login from "../components/nav/login.vue"
 import liebiao from "../components/nav/Hero-Children/liebiao.vue"
 import tuku from "../components/nav/Hero-Children/tuku.vue"
 export default new Router({
-  mode: 'history',
+ // mode: 'history',
+  mode: 'hash',
   routes: [
     {path:"/",redirect:"/home"},
     {path:"/home",component:home},

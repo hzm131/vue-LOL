@@ -33,8 +33,8 @@
                 <li><router-link to="/home/pifu" class="c">我的皮肤</router-link></li>
                 <li><router-link to="/home/zhanji" class="c">我的战绩</router-link></li>
                 <li><router-link to="/home/bisai" class="c">热门比赛</router-link></li>
-                <li><router-link to="/register" class="c">登录</router-link></li>
-                <li><router-link to="/login" class="c">注册</router-link></li>
+                <li><router-link to="/register" class="c">注册</router-link></li>
+                <li><router-link to="/login" class="c">登录</router-link></li>
             </ul>
         </div>
     </div>
