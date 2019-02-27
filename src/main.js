@@ -9,8 +9,11 @@ import store from './vuex/store'
 import "../static/css/common.css"
 import "../static/css/index.css"
 import "../static/css/index2.css"
-/* eslint-disable no-new */
 
+/* eslint-disable no-new */
+import 'element-ui/lib/theme-chalk/index.css'
+import element from './elementUi/index'
+Vue.use(element);
 
 
 

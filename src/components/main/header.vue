@@ -10,10 +10,10 @@
                     </div>
                     <ul class="header-content fr hidden-sm hidden-xs">
                         <li><router-link to="/home" class="lol a">首页</router-link></li>
-                        <li><router-link to="/home/hero" class="a">我的英雄</router-link></li>
-                        <li><router-link to="/home/pifu" class="a">我的皮肤</router-link></li>
-                        <li><router-link to="/home/zhanji" class="a">我的战绩</router-link></li>
-                        <li><router-link to="/home/bisai" class="a">热门比赛</router-link></li>
+                        <li><router-link to="/home/hero" class="a">上传视频</router-link></li>
+                        <li><router-link to="/home/pifu" class="a">查看视频</router-link></li>
+                        <li><router-link to="/home/zhanji" class="a">查看图片</router-link></li>
+                        <li><router-link to="/home/bisai" class="a">热门</router-link></li>
                     </ul>
                 </div>
                 <div class="header-right fr hidden-sm hidden-xs">
@@ -29,10 +29,10 @@
             <div class="z_j"></div>
             <ul>
                 <li><router-link to="/home" class="c">首页</router-link></li>
-                <li><router-link to="/home/hero" class="c">我的英雄</router-link></li>
-                <li><router-link to="/home/pifu" class="c">我的皮肤</router-link></li>
-                <li><router-link to="/home/zhanji" class="c">我的战绩</router-link></li>
-                <li><router-link to="/home/bisai" class="c">热门比赛</router-link></li>
+                <li><router-link to="/home/hero" class="c">上传视频</router-link></li>
+                <li><router-link to="/home/pifu" class="c">查看视频</router-link></li>
+                <li><router-link to="/home/zhanji" class="c">查看图片</router-link></li>
+                <li><router-link to="/home/bisai" class="c">热门</router-link></li>
                 <li><router-link to="/register" class="c">注册</router-link></li>
                 <li><router-link to="/login" class="c">登录</router-link></li>
             </ul>

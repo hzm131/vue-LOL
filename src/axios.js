@@ -26,6 +26,8 @@ axios.register = (name,password)=>{
   })
 };
 
+
+
 Vue.prototype.$axios = axios;
 
 export default axios

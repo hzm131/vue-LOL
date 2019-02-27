@@ -3,12 +3,12 @@
       <header-component></header-component>
       <h3>比赛视频</h3>
       <div class="xxx">
-        <video src="http://www.hezhimin.top:8000/public/videos/video.mp4"
+        <video src="http://www.hezhimin.top:8000/videos/video.mp4"
                controls="controls"
                width="500"
                height="300"
                preload="auto"
-               poster="http://www.hezhimin.top:8000/public/艾希.jpg"
+               poster="http://www.hezhimin.top:8000/images/艾希.jpg"
         >
           您的浏览器不支持视频标记
         </video>
